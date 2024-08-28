@@ -65,6 +65,7 @@ params:
   homeInfoParams:
     Title: "Paweł Banaś"
     Content: "Android Software Engineer"
+    Photo: profile-photo.png
 
   socialIcons:
     - name: github
