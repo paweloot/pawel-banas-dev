@@ -63,11 +63,27 @@ body:not(.dark) #sun {
 
 #menu a {
     font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    padding: 8px 12px;
+    margin: 0 8px;
 }
 
-#menu .active {
-    font-weight: 500;
-    border-bottom: 2px solid currentColor;
+#menu a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    border-radius: var(--radius);
+    bottom: 25px;
+    left: 50%;
+    background-color: var(--primary);
+    transition: all 0.4s;
+}
+
+#menu a:hover::before, #menu a:has(span.active)::before {
+    width: 80%;
+    left: 10%;
 }
 
 .lang-switch li,
